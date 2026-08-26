@@ -1,0 +1,23 @@
+[package]
+name = "dynamic_token_vault"
+version = "1.0.0"
+edition = "2021"
+authors = ["Visa HyperNet-Aegis Engineering"]
+description = "Ephemeral Post-Quantum Tokenization Vault"
+
+[dependencies]
+# Async Runtime and gRPC
+tokio = { version = "1.36", features = ["full"] }
+tonic = "0.11"
+prost = "0.12"
+
+# In-Memory Concurrency and Cryptography
+dashmap = "5.5" # High-performance concurrent hash map for TTL state
+rand = "0.8"
+sha3 = "0.10"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
