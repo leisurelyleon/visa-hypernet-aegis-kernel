@@ -1,0 +1,29 @@
+# OS & IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Rust / Cargo
+dynamic_token_vault/target/
+**/*.rs.bk
+Cargo.lock
+
+# C++ / CMake / eBPF
+kernel_bypass_router/build/
+consensus_matrix/build/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+
+# Assembly & Bare-Metal C
+hardware_crypto_engine/*.o
+hardware_crypto_engine/*.bin
+hardware_crypto_engine/*.elf
+
+# BPF/XDP specific compiled objects
+*.bpf.o
